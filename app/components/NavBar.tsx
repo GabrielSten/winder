@@ -10,14 +10,14 @@ export default function NavBar() {
 
   function setActiveColor(placeName: string): string {
     if (active === placeName) {
-      return "dark:text-active";
+      return "text-active";
     }
 
-    return "dark:text-inactive";
+    return "text-inactive";
   }
 
   return (
-    <div className="sticky top-0 flex w-full flex-col dark:bg-dark-banner scroll-auto z-10">
+    <div className="sticky top-0 flex w-full flex-col bg-banner scroll-auto z-10">
       <div className="flex items-center justify-between p-4 pl-1 min-w-90">
         <ul className="font-medium flex flex-row space-x-4">
           {places.map(({ name }, index) => {
@@ -26,7 +26,7 @@ export default function NavBar() {
                 <li>
                   <Link
                     href={parseSwe(name)}
-                    className={`transition-all py-2 pl-4 pr-4  hover:text-active hover:dark:text-active ${setActiveColor(
+                    className={`transition-all py-2 pl-4 pr-4 hover:text-active ${setActiveColor(
                       parseSwe(name),
                     )}`}
                     aria-current="page"
