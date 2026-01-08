@@ -52,7 +52,7 @@ export default async function Place({
 
   if (!data || !data.timeSeries) {
     return (
-      <main className="bg-bg dark:bg-dark-bg">
+      <main className="bg-bg">
         <NavBar />
         <div className="flex flex-col items-center justify-center min-h-screen px-6">
           <p className="text-orange">
@@ -86,7 +86,7 @@ export default async function Place({
   });
 
   return (
-    <main className="bg-bg dark:bg-dark-bg">
+    <main className="bg-bg">
       <NavBar />
       <div className="flex flex-col divide-y divide-divide px-6">
         {sortedTime.map(({ weekDay, weekDayDate, timeSeries }, index) => {
